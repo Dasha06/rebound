@@ -8,6 +8,48 @@ pg.mixer.init()
 
 #инициализируем игру
 pg.init()
+# загружаем спрайты
+PLITVERTICAL = pg.image.load('Sprites/plitavertical.png')
+PLITHORIZONTAL = pg.image.load('Sprites/plitahorizontal.png')
+LONGPLITHORIZONTAL = pg.image.load('Sprites/longplitahorizontal.png')
+LONGPLITVERTICAL = pg.image.load('Sprites/longplitavertical.png')
+BGLEVEL = pg.image.load('Sprites/BG.jpg')
+BUTTONMENU = pg.image.load('Sprites/Buttonmenu.png')
+BUTTONREPLAY = pg.image.load('Sprites/Buttonreplay.png')
+BUTTONNEXT = pg.image.load('Sprites/Buttonnext.png')
+
+BUTTONPAUSEMENU = pg.image.load('Sprites/Buttonpausemenu.png')
+BUTTONPAUSECONTINUE = pg.image.load('Sprites/Buttonpausecontinie.png')
+BUTTONPAUSEREPLAY = pg.image.load('Sprites/Buttonpausereplay.png')
+    
+TEXTPAUSE = pg.image.load('Sprites/textpause.png')
+
+
+GUNIMG = pg.image.load('Sprites/gun0.png')
+PLATEIMG = pg.image.load('Sprites/plate.png')
+
+BALLIMG = pg.image.load('Sprites/ball.png')
+
+gunImg = pg.image.load('Sprites/gun180.png')
+
+VOLUMEPLAYIMG = pg.image.load('Sprites/volumeplay.png')
+
+PORTALIMG = pg.image.load('Sprites/portal.png')
+VOLUMESTOPIMG = pg.image.load('Sprites/volumemute.png')
+TEXTCOMPLETE = pg.image.load('Sprites/textlevelcompleted.png')
+                    
+TEXTFINISH = pg.image.load('Sprites/textfinishgame.png')
+TEXTLEVELS = pg.image.load('Sprites/textLVL.png')
+
+BUTTONEXITLVL = pg.image.load('Sprites/Buttonexitlevels.png')
+BONUSLVLIMG = pg.image.load('Sprites/bonuslevel.png')
+
+BGLEVELS = pg.image.load('Sprites/BGLEVELS.png')
+TEXTGAME = pg.image.load('Sprites/textnameOfTheGame.png')
+BGMENU = pg.image.load('Sprites/BGMENU.png')
+BUTTONPLAY = pg.image.load('Sprites/Buttonplay.png')
+BUTTONEXIT = pg.image.load('Sprites/Buttonexit.png')
+   
 
 def level1():
     global numOfPlits
@@ -20,10 +62,10 @@ def level1():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png')]
+    plitsImg = [PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL]
     plitsX = [300, 600, 900, 750, 950, 1150, 1050]
     plitsY = [370, 100, 380, 480, 700, 500, 400]
     plitsPosition = ['vertical', 'vertical', 'vertical', 'horizontal', 'horizontal', 'vertical', 'horizontal']
@@ -43,10 +85,10 @@ def level2():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL]
     plitsX = [1000, 900, 1000, 700, 500, 1000, 1270]
     plitsY = [500, 450, 400, 100, 300, 800, 500]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical']
@@ -66,10 +108,10 @@ def level3():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL]
     plitsX = [900, 500, 650, 750, 850, 970, 800]
     plitsY = [600, 250, 100, 250, 100, 220, 370]
     plitsPosition = ['horizontal', 'vertical', 'vertical', 'vertical', 'horizontal', 'horizontal', 'horizontal']
@@ -89,9 +131,9 @@ def level4():
     global level
     # Плиты
     numOfPlits = 6
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),]
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL,]
     plitsX = [850, 400, 200, 400, 880, 1200]
     plitsY = [650, 200, 400, 600, 100, 500]
     plitsPosition = ['horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical', 'horizontal']
@@ -111,9 +153,9 @@ def level5():
     global level
     # Плиты
     numOfPlits = 6
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL]
     plitsX = [500, 800, 1000, 1270, 1020, 600]
     plitsY = [570, 250, 500, 250, -20, -20]
     plitsPosition = ['vertical', 'vertical', 'vertical', 'vertical', 'vertical', 'vertical']
@@ -133,11 +175,11 @@ def level6():
     global level
     # Плиты
     numOfPlits = 9
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL]
     plitsX = [1430, 1200, 1050, 700, 850, 1000, 700, 900, 650]
     plitsY = [670, 400, 550,    200, 50, 200, 450, 600 ,800]
     plitsPosition = ['vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical']
@@ -157,11 +199,11 @@ def level7():
     global level
     # Плиты
     numOfPlits = 9
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITHORIZONTAL]
     plitsX = [1100, 1400, 1100, 850, 870, 650, 630, 370, 450]
     plitsY = [600, 350, 100,    350, 780, 500, 100, 350, 700]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'vertical', 'horizontal', 'horizontal']
@@ -181,10 +223,10 @@ def level8():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL]
     plitsX = [1000, 1200, 950, 600, 400, -30, 750]
     plitsY = [500, 350, 100, 500, 250, 670, 750]
     plitsPosition = ['horizontal', 'vertical', 'vertical', 'vertical', 'horizontal', 'vertical', 'vertical']
@@ -204,10 +246,10 @@ def level9():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL]
     plitsX = [900, 1150, 1050, 900, 770, 350, 500, 650]
     plitsY = [400, 200, 100, 300, 100, 500, 650, 500]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical', 'horizontal']
@@ -227,11 +269,11 @@ def level10():
     global level
     # Плиты
     numOfPlits = 10
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL]
     plitsX = [620, 700, 1200, 1300, 1100, 800, 900, 1300, 1200, 950]
     plitsY = [100, -20, 500, 400, 200, 500, 600, 200, 50, 50]
     plitsPosition = ['horizontal', 'horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'vertical']
@@ -251,10 +293,10 @@ def level11():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL]
     plitsX = [400, 500, 600, 1300, 200, 475, 1150, 1075]
     plitsY = [120, 25, 125, 550, 475, 750, 50, 800]
     plitsPosition = ['vertical', 'vertical', 'horizontal', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical']
@@ -274,10 +316,10 @@ def level12():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png')]
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL]
     plitsX = [520, 1100, 970, 400, 400, 20, 1000]
     plitsY = [150, 700, 800, 220, 10, 400, 300]
     plitsPosition = ['vertical', 'horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal']
@@ -297,10 +339,10 @@ def level13():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'), ]
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, ]
     plitsX = [1100, 900, 500, 400, 900, 1050, 1200, 200]
     plitsY = [350, 600, 200, 300, 800, 600, 800, 500]
     plitsPosition = ['vertical', 'horizontal', 'horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical', 'horizontal']
@@ -320,13 +362,13 @@ def level14():
     global level
     # Плиты
     numOfPlits = 13
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITVERTICAL]
     plitsX = [500, 700, 380, 250, 100, 250, 500, 620, 900,  1200, 1000, 900666, 1020]
     plitsY = [150, 300, 600, 400, 600, 750, 750, 500, 200, 400, 600, 200, 180]
     plitsPosition = ['horizontal', 'horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal',
@@ -347,12 +389,12 @@ def level15():
     global level
     # Плиты
     numOfPlits = 12
-    plitsImg = [pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png')]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL]
     plitsX = [550, 450, 250, 500, 700, 450, 900, 1000, 1200, 950, 1100, 960]
     plitsY = [150, 0, 250, 500, 300, 250, 200, 50, 300,      500, 600, 710]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal', 'vertical',
@@ -373,24 +415,24 @@ def bonus_level():
     global level
     # Плиты
     numOfPlits = 35
-    plitsImg = [pg.image.load('Sprites/longplitahorizontal.png'), pg.image.load('Sprites/longplitavertical.png'),
-                pg.image.load('Sprites/longplitahorizontal.png'), pg.image.load('Sprites/longplitavertical.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitahorizontal.png'),
-                pg.image.load('Sprites/plitahorizontal.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'),pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
-                pg.image.load('Sprites/plitavertical.png'), pg.image.load('Sprites/plitavertical.png'),
+    plitsImg = [LONGPLITHORIZONTAL, LONGPLITVERTICAL,
+                LONGPLITHORIZONTAL, LONGPLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL,PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL,
                 ]
     plitsX = [0, 0, 0, 1518, 350, 700, 1100,
               150, 350, 530, 700, 900, 1100, 1300,
@@ -425,38 +467,26 @@ def game():
     #создаем окно
     screen = pg.display.set_mode((1552, 900))
 
-    #Фон
-    background = pg.image.load('Sprites/BG.jpg')
-
-    # конечные кнопки
-    buttonMenu = pg.image.load('Sprites/Buttonmenu.png')
-    buttonReplay = pg.image.load('Sprites/Buttonreplay.png')
-    buttonNext = pg.image.load('Sprites/Buttonnext.png')
-
     # пауза
     pauseBg = pg.Surface((1600, 900), pg.SRCALPHA)  # per-pixel alpha
     pauseBg.fill((255, 255, 255, 128))
     pause = False
-    buttonPauseMenu = pg.image.load('Sprites/Buttonpausemenu.png')
     pauseButtonMenuX = 400
     pauseButtonMenuY = 600
-    buttonPauseContinue = pg.image.load('Sprites/Buttonpausecontinie.png')
     pauseButtonContinueX = 1000
     pauseButtonContinueY = 600
-    buttonPauseReplay = pg.image.load('Sprites/Buttonpausereplay.png')
     buttonPauseReplayX = 700
     buttonPauseReplayY = 600
-    textPause = pg.image.load('Sprites/textpause.png')
 
     # функция паузы
     def pausa():
         if pause == True:
             screen.blit(pauseBg, (0,0))
             text('Уровень ' + str(level), 100, 540, 350, 230, 230, 100)
-            screen.blit(buttonPauseMenu, (pauseButtonMenuX, pauseButtonMenuY))
-            screen.blit(buttonPauseContinue, (pauseButtonContinueX, pauseButtonContinueY))
-            screen.blit(buttonPauseReplay, (buttonPauseReplayX, buttonPauseReplayY))
-            screen.blit(textPause, (650, 30))
+            screen.blit(BUTTONPAUSEMENU, (pauseButtonMenuX, pauseButtonMenuY))
+            screen.blit(BUTTONPAUSECONTINUE, (pauseButtonContinueX, pauseButtonContinueY))
+            screen.blit(BUTTONPAUSEREPLAY, (buttonPauseReplayX, buttonPauseReplayY))
+            screen.blit(TEXTPAUSE, (650, 30))
 
     #музыка
     mixer.music.load('Musics/bgmusic.wav')
@@ -540,12 +570,12 @@ def game():
     #Функция конечных кнопок
     def end_buttons():
         if level < 15:
-            screen.blit(buttonMenu, (300, 650))
-            screen.blit(buttonReplay, (700, 650))
-            screen.blit(buttonNext, (1100, 650))
+            screen.blit(BUTTONMENU, (300, 650))
+            screen.blit(BUTTONREPLAY, (700, 650))
+            screen.blit(BUTTONNEXT, (1100, 650))
         else:
-            screen.blit(buttonMenu, (600, 650))
-            screen.blit(buttonReplay, (900, 650))
+            screen.blit(BUTTONMENU, (600, 650))
+            screen.blit(BUTTONREPLAY, (900, 650))
 
     # функция значка звука
     def music():
@@ -589,7 +619,7 @@ def game():
 
         # отрисываем фон
         screen.fill((0,0,0))
-        screen.blit(background, (0, 0))
+        screen.blit(BGLEVEL, (0, 0))
 
 
         # проверяем все события
@@ -785,35 +815,35 @@ def game():
                             if level < 11:
                                 if position == 1:
                                     ballMoveY = 0
-                                    ballMoveX = 0.5
+                                    ballMoveX = 1
                                 elif position == 2:
-                                    ballMoveX = 0.5
-                                    ballMoveY = 0.5
+                                    ballMoveX = 1
+                                    ballMoveY = 1
                                 elif position == 3:
-                                    ballMoveY = 0.5
+                                    ballMoveY = 1
                                     ballMoveX = 0
                                 elif position == 4:
-                                    ballMoveY = 0.5
-                                    ballMoveX = -0.5
+                                    ballMoveY = 1
+                                    ballMoveX = -1
                                 elif position == 5:
                                     ballMoveY = 0
-                                    ballMoveX = -0.5
+                                    ballMoveX = -1
                             elif level > 10:
                                 if position == 1:
                                     ballMoveY = 0
-                                    ballMoveX = 0.5
+                                    ballMoveX = 1
                                 elif position == 2:
-                                    ballMoveX = 0.5
-                                    ballMoveY = -0.5
+                                    ballMoveX = 1
+                                    ballMoveY = -1
                                 elif position == 3:
-                                    ballMoveY = -0.5
+                                    ballMoveY = -1
                                     ballMoveX = 0
                                 elif position == 4:
-                                    ballMoveY = -0.5
-                                    ballMoveX = -0.5
+                                    ballMoveY = -1
+                                    ballMoveX = -1
                                 elif position == 5:
                                     ballMoveY = 0
-                                    ballMoveX = -0.5
+                                    ballMoveX = -1
                                 charged = False
                             charged = False
                             if levelCompleted == False:
@@ -890,10 +920,10 @@ def game():
                         if plitsX[i] < coords[0] < plitsX[i] + 96 and plitsY[i] < coords[1] < plitsY[i] + 96:
                             if plitsPosition[i] == 'vertical':
                                 plitsPosition[i] = 'horizontal'
-                                plitsImg[i] = pg.image.load('Sprites/plitahorizontal.png')
+                                plitsImg[i] = PLITHORIZONTAL
                             elif plitsPosition[i] == 'horizontal':
                                 plitsPosition[i] = 'vertical'
-                                plitsImg[i] = pg.image.load('Sprites/plitavertical.png')
+                                plitsImg[i] = PLITVERTICAL
                             play_music('Musics/povorot.wav')
                 # значок мызыки
                 if volumeX < coords[0] < volumeX + 32 and volumeY < coords[1] < volumeY + 32:
@@ -1174,7 +1204,6 @@ def game():
                 for i in range(numOfPlits):
                     if plitsPosition[i] == 'vertical':
                         if (plitsY[i] - 15 < ballY + 32 and ballY < plitsY[i] + 111) and (plitsX[i] + 32 < ballX + 32 and ballX < plitsX[i] + 64):
-                            print('b')
                             if plitsY[i] < ballY + 32 and ballY < plitsY[i] + 96:
                                 if ballMoveX == 1:
                                     ballMoveX = -1
@@ -1183,10 +1212,8 @@ def game():
                             elif ballY + 32 < plitsY[i] or ballY > plitsY[i] + 96:
                                 if ballMoveY == 1:
                                     ballMoveY = -1
-                                    print('aqaaaaa')
                                 elif ballMoveY == -1:
                                     ballMoveY = 1
-                                    print('asdfsdf')
                             play_music('Musics/rebound.wav')
 
                     elif plitsPosition[i] == 'horizontal':
