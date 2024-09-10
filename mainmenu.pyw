@@ -1,18 +1,19 @@
 import pygame as pg
 from pygame import mixer
 
-
 # иницилизируем музыку
 pg.mixer.pre_init(44100, -16, 2, 2048)
 pg.mixer.init()
 
-#инициализируем игру
+# инициализируем игру
 pg.init()
+
 # загружаем спрайты
 PLITVERTICAL = pg.image.load('Sprites/plitavertical.png')
 PLITHORIZONTAL = pg.image.load('Sprites/plitahorizontal.png')
 LONGPLITHORIZONTAL = pg.image.load('Sprites/longplitahorizontal.png')
 LONGPLITVERTICAL = pg.image.load('Sprites/longplitavertical.png')
+
 BGLEVEL = pg.image.load('Sprites/BG.jpg')
 BUTTONMENU = pg.image.load('Sprites/Buttonmenu.png')
 BUTTONREPLAY = pg.image.load('Sprites/Buttonreplay.png')
@@ -21,35 +22,22 @@ BUTTONNEXT = pg.image.load('Sprites/Buttonnext.png')
 BUTTONPAUSEMENU = pg.image.load('Sprites/Buttonpausemenu.png')
 BUTTONPAUSECONTINUE = pg.image.load('Sprites/Buttonpausecontinie.png')
 BUTTONPAUSEREPLAY = pg.image.load('Sprites/Buttonpausereplay.png')
-    
+
 TEXTPAUSE = pg.image.load('Sprites/textpause.png')
 
-
-GUNIMG = pg.image.load('Sprites/gun0.png')
-PLATEIMG = pg.image.load('Sprites/plate.png')
-
-BALLIMG = pg.image.load('Sprites/ball.png')
-
-gunImg = pg.image.load('Sprites/gun180.png')
-
-VOLUMEPLAYIMG = pg.image.load('Sprites/volumeplay.png')
-
 PORTALIMG = pg.image.load('Sprites/portal.png')
-VOLUMESTOPIMG = pg.image.load('Sprites/volumemute.png')
 TEXTCOMPLETE = pg.image.load('Sprites/textlevelcompleted.png')
-                    
+
 TEXTFINISH = pg.image.load('Sprites/textfinishgame.png')
 TEXTLEVELS = pg.image.load('Sprites/textLVL.png')
-
 BUTTONEXITLVL = pg.image.load('Sprites/Buttonexitlevels.png')
-BONUSLVLIMG = pg.image.load('Sprites/bonuslevel.png')
 
 BGLEVELS = pg.image.load('Sprites/BGLEVELS.png')
 TEXTGAME = pg.image.load('Sprites/textnameOfTheGame.png')
 BGMENU = pg.image.load('Sprites/BGMENU.png')
 BUTTONPLAY = pg.image.load('Sprites/Buttonplay.png')
 BUTTONEXIT = pg.image.load('Sprites/Buttonexit.png')
-   
+
 
 def level1():
     global numOfPlits
@@ -62,10 +50,8 @@ def level1():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL]
+    plitsImg = [PLITVERTICAL, PLITVERTICAL,PLITVERTICAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL]
     plitsX = [300, 600, 900, 750, 950, 1150, 1050]
     plitsY = [370, 100, 380, 480, 700, 500, 400]
     plitsPosition = ['vertical', 'vertical', 'vertical', 'horizontal', 'horizontal', 'vertical', 'horizontal']
@@ -73,6 +59,7 @@ def level1():
     portalY = 50
     level = 1
     game()
+
 
 def level2():
     global numOfPlits
@@ -85,10 +72,8 @@ def level2():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL]
     plitsX = [1000, 900, 1000, 700, 500, 1000, 1270]
     plitsY = [500, 450, 400, 100, 300, 800, 500]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical']
@@ -96,6 +81,7 @@ def level2():
     portalY = 700
     level = 2
     game()
+
 
 def level3():
     global numOfPlits
@@ -108,10 +94,8 @@ def level3():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITHORIZONTAL]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL, PLITHORIZONTAL]
     plitsX = [900, 500, 650, 750, 850, 970, 800]
     plitsY = [600, 250, 100, 250, 100, 220, 370]
     plitsPosition = ['horizontal', 'vertical', 'vertical', 'vertical', 'horizontal', 'horizontal', 'horizontal']
@@ -119,6 +103,7 @@ def level3():
     portalY = 800
     level = 3
     game()
+
 
 def level4():
     global numOfPlits
@@ -131,9 +116,8 @@ def level4():
     global level
     # Плиты
     numOfPlits = 6
-    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITHORIZONTAL,]
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL]
     plitsX = [850, 400, 200, 400, 880, 1200]
     plitsY = [650, 200, 400, 600, 100, 500]
     plitsPosition = ['horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical', 'horizontal']
@@ -141,6 +125,7 @@ def level4():
     portalY = 250
     level = 4
     game()
+
 
 def level5():
     global numOfPlits
@@ -153,8 +138,7 @@ def level5():
     global level
     # Плиты
     numOfPlits = 6
-    plitsImg = [PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
+    plitsImg = [PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
                 PLITVERTICAL, PLITVERTICAL]
     plitsX = [500, 800, 1000, 1270, 1020, 600]
     plitsY = [570, 250, 500, 250, -20, -20]
@@ -163,6 +147,7 @@ def level5():
     portalY = 520
     level = 5
     game()
+
 
 def level6():
     global numOfPlits
@@ -175,18 +160,18 @@ def level6():
     global level
     # Плиты
     numOfPlits = 9
-    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL,  PLITHORIZONTAL, PLITVERTICAL,
                 PLITVERTICAL]
     plitsX = [1430, 1200, 1050, 700, 850, 1000, 700, 900, 650]
-    plitsY = [670, 400, 550,    200, 50, 200, 450, 600 ,800]
-    plitsPosition = ['vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical']
+    plitsY = [670, 400, 550, 200, 50, 200, 450, 600, 800]
+    plitsPosition = ['vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'horizontal', 'horizontal',
+                     'vertical', 'vertical']
     portalX = 100
     portalY = 220
     level = 6
     game()
+
 
 def level7():
     global numOfPlits
@@ -199,18 +184,18 @@ def level7():
     global level
     # Плиты
     numOfPlits = 9
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL,
                 PLITHORIZONTAL]
     plitsX = [1100, 1400, 1100, 850, 870, 650, 630, 370, 450]
-    plitsY = [600, 350, 100,    350, 780, 500, 100, 350, 700]
-    plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'vertical', 'horizontal', 'horizontal']
+    plitsY = [600, 350, 100, 350, 780, 500, 100, 350, 700]
+    plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'vertical',
+                     'horizontal', 'horizontal']
     portalX = 100
     portalY = 300
     level = 7
     game()
+
 
 def level8():
     global numOfPlits
@@ -223,10 +208,8 @@ def level8():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL]
     plitsX = [1000, 1200, 950, 600, 400, -30, 750]
     plitsY = [500, 350, 100, 500, 250, 670, 750]
     plitsPosition = ['horizontal', 'vertical', 'vertical', 'vertical', 'horizontal', 'vertical', 'vertical']
@@ -234,6 +217,7 @@ def level8():
     portalY = 750
     level = 8
     game()
+
 
 def level9():
     global numOfPlits
@@ -246,17 +230,17 @@ def level9():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITHORIZONTAL]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITHORIZONTAL]
     plitsX = [900, 1150, 1050, 900, 770, 350, 500, 650]
     plitsY = [400, 200, 100, 300, 100, 500, 650, 500]
-    plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical', 'horizontal']
+    plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical',
+                     'horizontal']
     portalX = 560
     portalY = 450
     level = 9
     game()
+
 
 def level10():
     global numOfPlits
@@ -269,18 +253,18 @@ def level10():
     global level
     # Плиты
     numOfPlits = 10
-    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITVERTICAL,
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL,
                 PLITHORIZONTAL, PLITVERTICAL]
     plitsX = [620, 700, 1200, 1300, 1100, 800, 900, 1300, 1200, 950]
     plitsY = [100, -20, 500, 400, 200, 500, 600, 200, 50, 50]
-    plitsPosition = ['horizontal', 'horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal', 'vertical']
+    plitsPosition = ['horizontal', 'horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal', 'vertical',
+                     'vertical', 'horizontal', 'vertical']
     portalX = 450
     portalY = 600
     level = 10
     game()
+
 
 def level11():
     global numOfPlits
@@ -293,10 +277,8 @@ def level11():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL]
+    plitsImg = [PLITVERTICAL, PLITVERTICAL, PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL]
     plitsX = [400, 500, 600, 1300, 200, 475, 1150, 1075]
     plitsY = [120, 25, 125, 550, 475, 750, 50, 800]
     plitsPosition = ['vertical', 'vertical', 'horizontal', 'horizontal', 'vertical', 'vertical', 'vertical', 'vertical']
@@ -304,6 +286,7 @@ def level11():
     portalY = 250
     level = 11
     game()
+
 
 def level12():
     global numOfPlits
@@ -316,10 +299,8 @@ def level12():
     global level
     # Плиты
     numOfPlits = 7
-    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL]
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITVERTICAL, PLITHORIZONTAL]
     plitsX = [520, 1100, 970, 400, 400, 20, 1000]
     plitsY = [150, 700, 800, 220, 10, 400, 300]
     plitsPosition = ['vertical', 'horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'horizontal']
@@ -327,6 +308,7 @@ def level12():
     portalY = 600
     level = 12
     game()
+
 
 def level13():
     global numOfPlits
@@ -339,17 +321,17 @@ def level13():
     global level
     # Плиты
     numOfPlits = 8
-    plitsImg = [PLITVERTICAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL, ]
+    plitsImg = [PLITVERTICAL, PLITHORIZONTAL, PLITHORIZONTAL, PLITHORIZONTAL,
+                PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, ]
     plitsX = [1100, 900, 500, 400, 900, 1050, 1200, 200]
     plitsY = [350, 600, 200, 300, 800, 600, 800, 500]
-    plitsPosition = ['vertical', 'horizontal', 'horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical', 'horizontal']
+    plitsPosition = ['vertical', 'horizontal', 'horizontal', 'horizontal', 'horizontal', 'vertical', 'vertical',
+                     'horizontal']
     portalX = 1400
     portalY = 600
     level = 13
     game()
+
 
 def level14():
     global numOfPlits
@@ -362,14 +344,11 @@ def level14():
     global level
     # Плиты
     numOfPlits = 13
-    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITVERTICAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
+    plitsImg = [PLITHORIZONTAL, PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL,
+                PLITVERTICAL, PLITHORIZONTAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITHORIZONTAL, PLITHORIZONTAL,
                 PLITVERTICAL]
-    plitsX = [500, 700, 380, 250, 100, 250, 500, 620, 900,  1200, 1000, 900666, 1020]
+    plitsX = [500, 700, 380, 250, 100, 250, 500, 620, 900, 1200, 1000, 900666, 1020]
     plitsY = [150, 300, 600, 400, 600, 750, 750, 500, 200, 400, 600, 200, 180]
     plitsPosition = ['horizontal', 'horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal',
                      'horizontal', 'vertical', 'vertical', 'vertical', 'horizontal', 'horizontal', 'vertical']
@@ -377,6 +356,7 @@ def level14():
     portalY = 725
     level = 14
     game()
+
 
 def level15():
     global numOfPlits
@@ -389,20 +369,18 @@ def level15():
     global level
     # Плиты
     numOfPlits = 12
-    plitsImg = [PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL]
+    plitsImg = [PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITHORIZONTAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL]
     plitsX = [550, 450, 250, 500, 700, 450, 900, 1000, 1200, 950, 1100, 960]
-    plitsY = [150, 0, 250, 500, 300, 250, 200, 50, 300,      500, 600, 710]
+    plitsY = [150, 0, 250, 500, 300, 250, 200, 50, 300, 500, 600, 710]
     plitsPosition = ['horizontal', 'vertical', 'horizontal', 'vertical', 'horizontal', 'vertical',
                      'horizontal', 'vertical', 'horizontal', 'vertical', 'vertical', 'vertical']
     portalX = 550
     portalY = 300
     level = 15
     game()
+
 
 def bonus_level():
     global numOfPlits
@@ -415,25 +393,15 @@ def bonus_level():
     global level
     # Плиты
     numOfPlits = 35
-    plitsImg = [LONGPLITHORIZONTAL, LONGPLITVERTICAL,
-                LONGPLITHORIZONTAL, LONGPLITVERTICAL,
-                PLITHORIZONTAL, PLITHORIZONTAL,
-                PLITHORIZONTAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL,PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                PLITVERTICAL, PLITVERTICAL,
-                ]
+    plitsImg = [LONGPLITHORIZONTAL, LONGPLITVERTICAL, LONGPLITHORIZONTAL, LONGPLITVERTICAL,
+                PLITHORIZONTAL, PLITHORIZONTAL, PLITHORIZONTAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL, PLITVERTICAL,
+                PLITVERTICAL, PLITVERTICAL, PLITVERTICAL]
     plitsX = [0, 0, 0, 1518, 350, 700, 1100,
               150, 350, 530, 700, 900, 1100, 1300,
               50, 250, 430, 600, 800, 1000, 1200,
@@ -464,7 +432,7 @@ def game():
     global plitsPosition
     global portalX
     global portalY
-    #создаем окно
+    # создаем окно
     screen = pg.display.set_mode((1552, 900))
 
     # пауза
@@ -481,14 +449,14 @@ def game():
     # функция паузы
     def pausa():
         if pause == True:
-            screen.blit(pauseBg, (0,0))
+            screen.blit(pauseBg, (0, 0))
             text('Уровень ' + str(level), 100, 540, 350, 230, 230, 100)
             screen.blit(BUTTONPAUSEMENU, (pauseButtonMenuX, pauseButtonMenuY))
             screen.blit(BUTTONPAUSECONTINUE, (pauseButtonContinueX, pauseButtonContinueY))
             screen.blit(BUTTONPAUSEREPLAY, (buttonPauseReplayX, buttonPauseReplayY))
             screen.blit(TEXTPAUSE, (650, 30))
 
-    #музыка
+    # музыка
     mixer.music.load('Musics/bgmusic.wav')
     mixer.music.play(-1)
     mixer.music.set_volume(0.1)
@@ -503,7 +471,7 @@ def game():
     position = 3
 
     if level < 6:
-        #Пушка
+        # Пушка
         gunImg = pg.image.load('Sprites/gun0.png')
         plateImg = pg.image.load('Sprites/plate.png')
         plateX = 704
@@ -511,7 +479,7 @@ def game():
         gunX = 704
         gunY = 750
 
-        #Снаряд
+        # Снаряд
         ballImg = pg.image.load('Sprites/ball.png')
         ballX = 736
         ballY = 770
@@ -519,7 +487,7 @@ def game():
         ballMoveY = 1
 
     elif level > 5 and level < 11:
-        #Пушка
+        # Пушка
         gunImg = pg.image.load('Sprites/gun0.png')
         plateImg = pg.image.load('Sprites/plate.png')
         plateX = 1300
@@ -527,7 +495,7 @@ def game():
         gunX = 1300
         gunY = 750
 
-        #Снаряд
+        # Снаряд
         ballImg = pg.image.load('Sprites/ball.png')
         ballX = 1336
         ballY = 770
@@ -535,7 +503,7 @@ def game():
         ballMoveY = 1
 
     elif level > 10:
-        #Пушка
+        # Пушка
         gunImg = pg.image.load('Sprites/gun180.png')
         plateImg = pg.image.load('Sprites/plate.png')
         plateX = 704
@@ -543,7 +511,7 @@ def game():
         gunX = 704
         gunY = 10
 
-        #Снаряд
+        # Снаряд
         ballImg = pg.image.load('Sprites/ball.png')
         ballX = 736
         ballY = 10
@@ -556,18 +524,14 @@ def game():
     volumeY = 10
     volume = 0.5
 
-
-    #прохождения уровня
+    # прохождения уровня
     levelCompleted = False
 
-    #портал
-    portalImg = pg.image.load('Sprites/portal.png')
-
-    #Функция портала
+    # Функция портала
     def portal(x, y):
-        screen.blit(portalImg, (x,y))
+        screen.blit(PORTALIMG, (x, y))
 
-    #Функция конечных кнопок
+    # Функция конечных кнопок
     def end_buttons():
         if level < 15:
             screen.blit(BUTTONMENU, (300, 650))
@@ -593,34 +557,32 @@ def game():
             volumeImg = pg.image.load('Sprites/volumeplay.png')
             volume = 0.5
 
-    #Функция пушки
+    # Функция пушки
     def gun(x, y, x1, y1):
         screen.blit(gunImg, (x, y))
-        screen.blit(plateImg, (x1,y1))
+        screen.blit(plateImg, (x1, y1))
 
-    #Функция плит
+    # Функция плит
     def plits(x, y, i):
         screen.blit(plitsImg[i], (x, y))
 
     def text(text, size, x, y, r, g, b):
         font = pg.font.Font('freesansbold.ttf', size)
         overText = font.render(text,
-                          True, (r, g, b))
+                               True, (r, g, b))
         screen.blit(overText, (x, y))
 
-    #Функция снаряда
-    def ball(x,y):
+    # Функция снаряда
+    def ball(x, y):
         screen.blit(ballImg, (x, y))
 
-
-    #игровой цикл
+    # игровой цикл
     running = True
     while running:
 
         # отрисываем фон
-        screen.fill((0,0,0))
+        screen.fill((0, 0, 0))
         screen.blit(BGLEVEL, (0, 0))
-
 
         # проверяем все события
         for event in pg.event.get():
@@ -719,7 +681,6 @@ def game():
                                 if charged == True:
                                     ballX = 725
                                     ballY = 10
-
 
                     if event.key == pg.K_RIGHT:
                         if level < 6:
@@ -910,7 +871,6 @@ def game():
                     else:
                         pause = False
 
-
             # реализовываем поворот плит при нажатии
             if event.type == pg.MOUSEBUTTONDOWN:
                 coords = event.pos
@@ -1063,17 +1023,20 @@ def game():
 
                 # кнопка в меню из паузы
                 if pause == True:
-                    if pauseButtonMenuX < coords[0] < pauseButtonMenuX + 202 and pauseButtonMenuY < coords[1] < pauseButtonMenuY + 176:
+                    if pauseButtonMenuX < coords[0] < pauseButtonMenuX + 202 and pauseButtonMenuY < coords[
+                        1] < pauseButtonMenuY + 176:
                         running = False
                         mixer.music.stop()
                         play_music('Musics/buttonclick.wav')
                         menulevelsrun()
-                # кнопка продолжить из пауза
-                    if pauseButtonContinueX < coords[0] < pauseButtonContinueX + 202 and pauseButtonContinueY < coords[1] < pauseButtonContinueY + 176:
+                    # кнопка продолжить из пауза
+                    if pauseButtonContinueX < coords[0] < pauseButtonContinueX + 202 and pauseButtonContinueY < coords[
+                        1] < pauseButtonContinueY + 176:
                         play_music('Musics/buttonclick.wav')
                         pause = False
-                # кнопка заново из паузы
-                    if buttonPauseReplayX < coords[0] < buttonPauseReplayX + 140 and buttonPauseReplayY  < coords[1] < buttonPauseReplayY + 103:
+                    # кнопка заново из паузы
+                    if buttonPauseReplayX < coords[0] < buttonPauseReplayX + 140 and buttonPauseReplayY < coords[
+                        1] < buttonPauseReplayY + 103:
                         play_music('Musics/buttonclick.wav')
                         if level == 0:
                             bonus_level()
@@ -1198,12 +1161,12 @@ def game():
                 # рисуем конечные кнопки
                 end_buttons()
 
-
             # проверка столкновения плит и шарика
             if charged == False:
                 for i in range(numOfPlits):
                     if plitsPosition[i] == 'vertical':
-                        if (plitsY[i] - 15 < ballY + 32 and ballY < plitsY[i] + 111) and (plitsX[i] + 32 < ballX + 32 and ballX < plitsX[i] + 64):
+                        if (plitsY[i] - 15 < ballY + 32 and ballY < plitsY[i] + 111) and (
+                                plitsX[i] + 32 < ballX + 32 and ballX < plitsX[i] + 64):
                             if plitsY[i] < ballY + 32 and ballY < plitsY[i] + 96:
                                 if ballMoveX == 1:
                                     ballMoveX = -1
@@ -1217,7 +1180,8 @@ def game():
                             play_music('Musics/rebound.wav')
 
                     elif plitsPosition[i] == 'horizontal':
-                        if (plitsY[i] + 32 < ballY + 32 and ballY < plitsY[i] + 64) and (plitsX[i] < ballX + 32 and ballX < plitsX[i] + 110):
+                        if (plitsY[i] + 32 < ballY + 32 and ballY < plitsY[i] + 64) and (
+                                plitsX[i] < ballX + 32 and ballX < plitsX[i] + 110):
                             if plitsX[i] < ballX + 32 and ballX < plitsX[i] + 96:
                                 if ballMoveY == 1:
                                     ballMoveY = -1
@@ -1246,9 +1210,9 @@ def game():
                                 ballMoveX = 1
                             play_music('Musics/rebound.wav')
 
-            #полёт пули и её отрисовка
+            # полёт пули и её отрисовка
             if charged == False:
-                for i in range(0,15):
+                for i in range(0, 15):
                     ballX -= ballMoveX
                     ballY -= ballMoveY
                     ball(ballX, ballY)
@@ -1265,19 +1229,20 @@ def game():
         # обновляем экран
         pg.display.update()
 
+
 # функция меню уровней
 def menulevelsrun():
-    #создаем окно
+    # создаем окно
     screen1 = pg.display.set_mode((1280, 850))
 
     # текст выбор уровня
     textlevels = pg.image.load('Sprites/textLVL.png')
 
     # текст
-    def text(text, size, x, y, r,g,b):
+    def text(text, size, x, y, r, g, b):
         font = pg.font.Font('freesansbold.ttf', size)
         overText = font.render(text,
-                          True, (r, g, b))
+                               True, (r, g, b))
         screen1.blit(overText, (x, y))
 
     # кнопка выйти
@@ -1290,7 +1255,7 @@ def menulevelsrun():
     levelsY = []
     levelImg = []
     colortext = [40, 40, 255]
-    for i in range(0,15):
+    for i in range(0, 15):
         levelImg.append(pg.image.load('Sprites/level.png'))
     onelevelX = 140
     onelevelY = 150
@@ -1308,17 +1273,16 @@ def menulevelsrun():
     # бонус уровень
     bonuslevelImg = pg.image.load('Sprites/bonuslevel.png')
 
-
-    #Фон
+    # Фон
     background = pg.image.load('Sprites/BGLEVELS.png')
 
-    #игровой цикл
+    # игровой цикл
     running1 = True
     while running1:
 
         # отрисываем фон
         screen1.fill((0, 0, 0))
-        screen1.blit(background, (0, 0))
+        screen1.blit(BGLEVELS, (0, 0))
 
         # проверяем все события
         for event in pg.event.get():
@@ -1375,7 +1339,6 @@ def menulevelsrun():
                     Sound.play()
                     bonus_level()
 
-
         for i in range(0, 15):
             if i < 5:
                 screen1.blit(levelImg[i], (levelsX[i], levelsY[i]))
@@ -1392,7 +1355,7 @@ def menulevelsrun():
         screen1.blit(textlevels, (350, -70))
 
         # кнопка бонусный уровень
-        screen1.blit(bonuslevelImg, (580,608))
+        screen1.blit(bonuslevelImg, (580, 608))
 
         # отрисовываем кнопку "Выйти"
         screen1.blit(buttonexitImg, (575, 730))
@@ -1401,40 +1364,33 @@ def menulevelsrun():
         # обновляем экран
         pg.display.update()
 
+
 # функция главного меню
 def mainmenurun():
-    #создаем окно
+    # создаем окно
     screen2 = pg.display.set_mode((935, 673))
 
-    #текст
-    textgame = pg.image.load('Sprites/textnameOfTheGame.png')
-
-    #Фон
-    background = pg.image.load('Sprites/BGMENU.png')
-
-    #Кнопка играть
-    buttonplay = pg.image.load('Sprites/Buttonplay.png')
+    # Кнопка играть
     buttonX = 350
     buttonY = 200
 
-    def buttonplayfunction(x,y):
-        screen2.blit(buttonplay, (x, y))
+    def buttonplayfunction(x, y):
+        screen2.blit(BUTTONPLAY, (x, y))
 
-    #Кнопка выйти
-    buttonexit = pg.image.load('Sprites/Buttonexit.png')
+    # Кнопка выйти
     button1X = 350
     button1Y = 350
 
-    def buttonexitfunction(x,y):
-        screen2.blit(buttonexit, (x, y))
+    def buttonexitfunction(x, y):
+        screen2.blit(BUTTONEXIT, (x, y))
 
-    #игровой цикл
+    # игровой цикл
     running2 = True
     while running2:
 
         # отрисываем фон
         screen2.fill((0, 0, 0))
-        screen2.blit(background, (0, 0))
+        screen2.blit(BGMENU, (0, 0))
 
         for event in pg.event.get():
             # проверка закрытия окна
@@ -1454,17 +1410,17 @@ def mainmenurun():
                     Sound.play()
                     exit()
 
-
         # рисуем кнопку играть
         buttonplayfunction(buttonX, buttonY)
 
-        #рисуем кнопку выйти
+        # рисуем кнопку выйти
         buttonexitfunction(button1X, button1Y)
 
         # рисуем надпись "Rebound Walls"
-        screen2.blit(textgame, (150, 10))
+        screen2.blit(TEXTGAME, (150, 10))
 
         # обновляем экран
         pg.display.update()
+
 
 mainmenurun()
